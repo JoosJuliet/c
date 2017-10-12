@@ -3,9 +3,16 @@
 
 int gcd(int a, int b)
 {
-  int c;
-  c = a+b;
-  return
+  a>b ? a=a : a=b;
+  int rem;
+  rem = a%b;
+  while(rem!=0)
+  {
+    a=b;
+    b=rem;
+    rem =a%b;
+  }
+  return b;
 }
 
 int main(void)
