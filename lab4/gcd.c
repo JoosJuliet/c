@@ -3,7 +3,8 @@
 
 int gcd(int a, int b)
 {
-  a>b ? a=a : a=b;
+  if(a<b)
+     a = b;
   int rem;
   rem = a%b;
   while(rem!=0)
@@ -12,7 +13,7 @@ int gcd(int a, int b)
     b=rem;
     rem =a%b;
   }
-  return b;
+  return a;
 }
 
 int main(void)
