@@ -16,14 +16,16 @@ int gcd(int big, int small)
   int tmp;
   if(big<small)
   {
-    tmp = big = small;
-  	big = tmp;
+    tmp=big;
+    big=small;
+  	small=tmp;
   }
   // 더 큰수 big, 더 작은수 b
-  tmp = big%small; //깔끔히 나눠진다. 그렇다면 b가 최대공약수
+  tmp = big%small; //깔끔히 나눠진다. 그렇다면 small가 최대공약수
   while(tmp!=0) //나머지 있다 1
   {
-    big=small=tmp; //공통의
+    big=small;
+    small=tmp; //공통의
     tmp=big%small;
   }
   return small;
