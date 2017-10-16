@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int gcd(int, int);
+int gcd(int big, int small);
 
 int main(void)
 {
@@ -11,23 +11,20 @@ int main(void)
   printf("gcd(6840,324) = %d\n", gcd(6840,324));
 }
 
-int gcd(int a, int b)
+int gcd(int big, int small)
 {
-  int rem;
-  if(a<b)
+  int tmp;
+  if(big<small)
   {
-  	int tmp;
-    tmp = a;
-    a=b;
-  	a = tmp;
+    tmp = big = small;
+  	big = tmp;
   }
-  // 더 큰수 a, 더 작은수 b
-  rem = a%b; //깔끔히 나눠진다. 그렇다면 b가 최대공약수
-  while(rem!=0) //나머지 있다 1
+  // 더 큰수 big, 더 작은수 b
+  tmp = big%small; //깔끔히 나눠진다. 그렇다면 b가 최대공약수
+  while(tmp!=0) //나머지 있다 1
   {
-    a=b;
-    b=rem; //공통의
-    rem =a%b;
+    big=small=tmp; //공통의
+    tmp=big%small;
   }
-  return b;
+  return small;
 }
