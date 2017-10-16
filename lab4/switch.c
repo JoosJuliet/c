@@ -12,16 +12,16 @@ int int main(void) {
     switch (ch)
     {
       case 'a':
-        printf("You typed A.\n", );
+        printf("You typed A.\n");
         break;
-      case 'a':
-        printf("You typed B.\n", );
+      case 'b':
+        printf("You typed B.\n");
         break;
       case 0x63:
-        printf("You typed C.\n", );
+        printf("You typed C.\n");
         break;
       case 0x1b:
-        printf("You typed ESC\n", );
+        printf("You typed ESC\n");
         break;
     }
   }
