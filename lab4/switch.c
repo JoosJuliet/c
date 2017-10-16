@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h> //for tolower()
 
-int int main(void) {
+int main(void) {
   char ch;
   printf("Type character ...\n" );
   while (1)
