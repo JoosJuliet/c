@@ -9,7 +9,7 @@ int main(void)
   " n","  numbers"," quotient",
   "--","---------","---------");
   printf("%7d%19d\n%7d%19d\n", 0,0,1,1); /*1st 2 cases*/
-  for (n = 0; n < LIMIT; ++n) {
+  for (n = 0; n <=  LIMIT; ++n) {
     temp =f1;
     f1 += f0;
     f0 = temp;
