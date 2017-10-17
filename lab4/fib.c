@@ -13,7 +13,7 @@ int main(void)
     temp =f1;
     f1 += f0;
     f0 = temp;
-    printf("%71d%191d%29.16f\n", n,f1, (double) f1 / f0 );
+    printf("%7d%19d%29.16f\n", n,f1, (double) f1 / f0 );
   }
   return 0;
 }
