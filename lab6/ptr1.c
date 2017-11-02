@@ -25,7 +25,7 @@ int main()
   double a[3][4][3] ={
     {{1,2,3},{4,5,6},{7,8,9},{10,11,12}},
     {{13,14,15},{16,17,18},{19,20,21},{22,23,24}},
-    {{25,26,27}.{28,29,30},{31,32,33},{34,35,36}}
+    {{25,26,27},{28,29,30},{31,32,33},{34,35,36}}
   };
   print_triple_array("a",a,3,4,3);
   double (*b)[4][3];
@@ -39,7 +39,7 @@ int main()
   c=(double*(*)[4])malloc(sizeof(double*[4][3]));
   // Initialize c by b . Use double loops
   printf("\nAssigned c by b\n");
-  printf("a[2][3] = %p\n" a[2][3] );
+  printf("a[2][3] = %p\n", a[2][3] );
   printf("b[2][3] = %p\n", b[2][3]);
   printf("c[2][3] = %p\n", c[2][3]);
   printf("*c[2][3] = %3.0f\n", *c[2][3]);

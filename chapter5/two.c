@@ -1,13 +1,24 @@
 #include <stdio.h>
 #include <math.h>
 
+#define LIMIT 30
+
 double k;
 int main(void) {
 
-  scanf("%f\n", &k);
-  k = sqrt(sqrt((double) k));
-  printf("%f\n", k);
+  int n;
+double afterk;
 
+
+
+  printf("%7s%19s\n","원래수"," 4승수");
+ 
+  for(n=0;n<=30;n++){
+ 
+	 afterk = sqrt(sqrt((double) n));
+
+   printf("%d    %lf\n", n,afterk);
+  }
   return 0;
 }
 

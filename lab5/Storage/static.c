@@ -1,5 +1,6 @@
+#include <stdio.h>
 
-void static function(void)
+void static_function(void)
 {
   static int cnt =0;
   ++cnt;

@@ -5,7 +5,7 @@ int main(void)
   char ans;
   int i,n=N;
   printf("%s",
-    "This program does not to do very much.\n",
+    "This program does not to do very much.\n"
     "Do you want more information?");
   scanf("%c", &ans);
   if(ans =='y'||ans=='Y')
