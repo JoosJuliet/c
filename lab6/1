@@ -39,10 +39,12 @@ int main()
   c=(double*(*)[4])malloc(sizeof(double*[4][3]));
   // Initialize c by b . Use double loops
   
+  for(int j=0; j<3;j++){
+   for (int i = 0; i < 4; i++) {
+     c = &b[i][j];
+   }
+  } 
 
- for(int i=0;i<3;i++)
-        for(int j=0;j<4;j++)
-            c[i][j] = b[i][j];
 
   printf("\nAssigned c by b\n");
 
