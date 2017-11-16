@@ -23,10 +23,10 @@ void moving_sign(char _a, char _b, char _c, char _d)
   char a = _a, b = _b, c = _c, d = _d, tmp;
   int p;
 
-  while(1)
-  {
+//  while(1)
+ // {
     system("clear");
     print_sign(p);
     sleep(1);
-  }
+ // }
 }
