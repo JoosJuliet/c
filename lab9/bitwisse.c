@@ -7,7 +7,7 @@ void bit_print(int);
 int pack(char,char,char,char);
 char unpack(int,int);
 
-int int main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   if(argc <3)
   {
