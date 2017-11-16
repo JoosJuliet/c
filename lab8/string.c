@@ -19,7 +19,7 @@ int main(void)
   /*replacement of string */
   ary_str1[0] = 'A';
   ary_str2[0] = 'A';
-  printf("%s,%S\n", ary_str1,ary_str2);
+  printf("%s,%s\n", ary_str1,ary_str2);
   /*error(why?)*/
   str1[0] = 'A';
 }

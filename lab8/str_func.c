@@ -15,7 +15,7 @@ int main(void)
   if(strcmp(str1,str2) == 0)
     printf("str1 is equal to str2!\n");
   else
-    printf("str1 is not equal to str2...\n", );
+    printf("str1 is not equal to str2...\n" );
   
   return 0;
 }
