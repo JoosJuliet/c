@@ -11,9 +11,9 @@ typedef struct stack {
 } stack;
 
 stack* init_stack();
-void push(stack* node*);
-int pop(stack*);
-int front(stack*)
+void push(stack*, node*);
+void pop(stack*);
+int top(stack*);
 void print_stack(stack*);
 
 int main(int argc, char const *argv[]) {
