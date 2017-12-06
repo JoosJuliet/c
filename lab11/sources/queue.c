@@ -30,7 +30,6 @@ int main(int argc, char const *argv[]){
   print_queue(q);
   for(i=0; i<4; i++) dequeue(q);
   front(q);
-//  printf("front() : %d\n", front(q));
   return 0;
 }
 queue* init_queue(){

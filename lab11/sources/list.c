@@ -72,25 +72,6 @@ void delAt(list *list, int n){
 	cur->next =del->next;
 	list->size--;
 	free(del);
-	// if (list->size < 1 || n > ((list->size) - 1) || n < 0) {
-  //   printf("%d is out of range\n",n);
-	// printf("------------------------------------\n");
-	// 	return;
-	// } else if (n == 0) {
-	// 	if (list->size < 2) {
-	// 		list->head = NULL;
-	// 	} else {
-	// 		list->head = list->head->next;
-	// 	}
-  //               printf("Delete %d index of linked list \n",n);
-	// } else {
-	// 	node *cursor = list->head;
-	// 	for (int i = 0; i < n - 1; i++)
-	// 		cursor = cursor->next;
-	// 	cursor->next = cursor->next->next;
-	// 	printf("Delete %d index of linked list \n",n);
-	// }
-	// list->size--;
 }
 
 void print_list(list *list){
