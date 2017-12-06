@@ -38,15 +38,15 @@ list* init_list(){
 }
 
 void appendTo(list *list, node *newnode){
-	if (list->size < 1) {
-		list->head = newnode;
-	} else {
-		node *cursor = list->head;
-		for (int i = 0; i < list->size-1; i++)
-			cursor = cursor->next;
-		cursor->next = newnode;
-	}
-	list->size++;
+    if (list->size < 1) {
+        list->head = newnode;
+    } else {
+        node *cursor = list->head;
+        for (int i = 0; i < list->size-1; i++)
+            cursor = cursor->next;
+        cursor->next = newnode;
+    }
+    list->size++;
 }
 
 void delAt(list *list, int n){
