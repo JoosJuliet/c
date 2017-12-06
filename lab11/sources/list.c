@@ -73,6 +73,7 @@ void delAt(list *list, int n){
 	node* del = cur->next;
 	cur->next =del->next;
 	list->size--;
+
 	free(del);
 }
 
