@@ -38,49 +38,67 @@ list* init_list(){
 }
 
 void appendTo(list *list, node *newnode){
-    if (list->size < 1) {
-        list->head = newnode;
-    } else {
-        node *cursor = list->head;
-        for (int i = 0; i < list->size-1; i++)
-            cursor = cursor->next;
-        cursor->next = newnode;
-    }
+  if(list->size == 0){
+    list->head=newnode;
     list->size++;
+    return ;
+  }
+  else{
+    node *cur=list->head;
+    for(int i=1;i<list->size;i++)
+      cur=cur->next;
+    cur->next=newnode;
+    list->size++;
+  }
 }
 
 void delAt(list *list, int n){
-	if (list->size < 1 || n > ((list->size) - 1) || n < 0) {
-    printf("%d is out of range\n",n);
-	printf("------------------------------------\n");
-		return;
-	} else if (n == 0) {
-		if (list->size < 2) {
-			list->head = NULL;
-		} else {
-			list->head = list->head->next;
-		}
-                printf("Delete %d index of linked list \n",n);
-	} else {
-		node *cursor = list->head;
-		for (int i = 0; i < n - 1; i++)
-			cursor = cursor->next;
-		cursor->next = cursor->next->next;
-		printf("Delete %d index of linked list \n",n);
+  if(n>(list->size) || n<1){
+		printf("%d is out of range\n",n);
+		return ;
 	}
+
+	node* cur=list->head;
+
+	if(list->size==1){
+			free(cur);
+			list->size--;
+			return ;
+	}
+
+	for(int i=1;i<n-1;i++)
+		cur=cur->next;
+	node* del = cur->next;
+	cur->next =del->next;
 	list->size--;
+	free(del);
+	// if (list->size < 1 || n > ((list->size) - 1) || n < 0) {
+  //   printf("%d is out of range\n",n);
+	// printf("------------------------------------\n");
+	// 	return;
+	// } else if (n == 0) {
+	// 	if (list->size < 2) {
+	// 		list->head = NULL;
+	// 	} else {
+	// 		list->head = list->head->next;
+	// 	}
+  //               printf("Delete %d index of linked list \n",n);
+	// } else {
+	// 	node *cursor = list->head;
+	// 	for (int i = 0; i < n - 1; i++)
+	// 		cursor = cursor->next;
+	// 	cursor->next = cursor->next->next;
+	// 	printf("Delete %d index of linked list \n",n);
+	// }
+	// list->size--;
 }
 
 void print_list(list *list){
-	if (list->size < 1) return;
-	node *cursor = list->head;
-  printf("list size = %d \n",list->size);
-
-	while (1) {
-		printf("[%d] ", cursor->val);
-		if (cursor->next == NULL) break;
-		cursor = cursor->next;
+  node* cur = list->head;
+	printf("list size : %d \n",list->size);
+	for(int i=0;i<list->size;i++){
+		printf("[%d]",cur->val);
+		cur=cur->next;
 	}
 	putchar('\n');
-	return;
 }
