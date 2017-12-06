@@ -23,12 +23,12 @@ int main(int argc, char const *argv[]) {
   printf("top : %d\n", top(s));
   pop(s);
   pop(s);
-  for ( i = 1; i < 6; i++) {
+  for ( i = 2; i < 6; i++) {
     push(s,newnode(i));
   }
   pop(s);
   print_stack(s);
-  for(i=0; i<5; i++) pop(s);
+  for(i=0; i<3; i++) pop(s);
   top(s);
   return 0;
 }
@@ -79,8 +79,7 @@ int top(stack* stack){
 void print_stack(stack* stack){
 	node* cur = stack->top;
 
-	printf("stack size : %d \n",stack->size);
-	printf("top\n");
+	printf("Top\n");
 	for(int i=0;i<stack->size;i++){
 		printf("[%d]\n",cur->val);
 		cur=cur->next;

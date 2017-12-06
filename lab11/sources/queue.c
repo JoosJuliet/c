@@ -27,8 +27,9 @@ int main(int argc, char const *argv[]){
     enqueue(q,newnode(i));
   }
   dequeue(q);
+  dequeue(q);
   print_queue(q);
-  for(i=0; i<4; i++) dequeue(q);
+  for(i=0; i<3; i++) dequeue(q);
   front(q);
   return 0;
 }

@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
   }
   print_list(linked);
   delAt(linked,-1);
-  delAt(linked,0);
+  delAt(linked,5);
   print_list(linked);
   delAt(linked,3);
   print_list(linked);
@@ -53,8 +53,10 @@ void appendTo(list *list, node *newnode){
 }
 
 void delAt(list *list, int n){
-  if(n>(list->size) || n<1){
-		printf("%d is out of range\n",n);
+	printf("Delete %d index of linked list \n",n);
+	printf("-------------------------------------\n");
+  	if(n>(list->size) || n<1){
+		printf("deleteAt() : out of index(n = %d)\n",n);
 		return ;
 	}
 
