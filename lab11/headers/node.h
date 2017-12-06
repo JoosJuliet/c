@@ -4,7 +4,7 @@ typedef struct node{
 } node;
 
 
-typedef struct_list{
+typedef struct struct_list{
  node *head;
  int size;
 } list;
