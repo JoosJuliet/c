@@ -11,12 +11,12 @@ typedef struct queue{
 	}queue;
 
 queue* init_queue();
-void enqueue(queue* node*);
+void enqueue(queue*, node*);
 void dequeue(queue*);
-int front(queue*)
+int front(queue*);
 void print_queue(queue*);
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[]){
   int i;
   queue* q = init_queue();
   enqueue(q, newnode(1));
@@ -28,8 +28,9 @@ int main(int argc, char const *argv[]) {
   }
   dequeue(q);
   print_queue(q);
-  for(i=0; i<3; i++) dequeue(q);
+  for(i=0; i<4; i++) dequeue(q);
   front(q);
+//  printf("front() : %d\n", front(q));
   return 0;
 }
 queue* init_queue(){

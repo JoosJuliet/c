@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
   }
   pop(s);
   print_stack(s);
-  for(i=0; i<3; i++) pop(s);
+  for(i=0; i<5; i++) pop(s);
   top(s);
   return 0;
 }
