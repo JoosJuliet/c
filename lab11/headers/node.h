@@ -3,8 +3,9 @@ typedef struct node{
   struct node* next;
 } node;
 
-
-typedef struct struct_list{
- node *head;
- int size;
-} list;
+node* newnode(int n){
+  node* temp = (node*)malloc(sizeof(node));
+  temp->val = n;
+  temp->next = NULL;
+  return temp;
+}

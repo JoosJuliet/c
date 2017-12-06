@@ -3,9 +3,9 @@
 #include "../headers/node.h"
 
 // Define 'list' using typedef and struct.
-typedef struct _list {
-	node *head;
-	int size;
+typedef struct struct_list{
+ node *head;
+ int size;
 } list;
 
 list* init_list();
@@ -13,12 +13,7 @@ void appendTo(list* list, node* newnode);
 void delAt(list* list, int n);
 void print_list(list* list);
 
-node* newnode(int n){
-  node* temp = (node*)malloc(sizeof(node));
-  temp->val = n;
-  temp->next = NULL;
-  return temp;
-}
+
 
 int main(int argc, char const *argv[]) {
   list* linked = init_list();
