@@ -131,6 +131,10 @@ void shuffle(Deck* deck){
 
 void freedeck(Deck* deck){  	/* malloc을 해줬던 메모리 영역들에 대하여 free()를 하지 않으면 메모리 문제가 발생하여 런타임 에러가 날 수 있다. */
 
+	Deck* tmp = stack->top;
+	stack->top = stack->top->next;
+	stack->size--;
+	free(tmp);
 	Deck* tmp = deck->top;
 
 	for(int i=1;i<n-1;i++)
