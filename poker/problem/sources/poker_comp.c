@@ -65,6 +65,7 @@ Card* eject(Deck* deck) {
 	Card* temp;
 
 	/* write codes */
+	temp = deck->top;
 	if(deck->top == NULL){
 		printf("error failed!\n");
 		return temp;
@@ -130,6 +131,14 @@ void shuffle(Deck* deck){
 
 void freedeck(Deck* deck){  	/* malloc을 해줬던 메모리 영역들에 대하여 free()를 하지 않으면 메모리 문제가 발생하여 런타임 에러가 날 수 있다. */
 
+	Deck* tmp = deck->top;
+
+	for(int i=1;i<n-1;i++)
+		tmp=tmp->top;
+	Deck* del = tmp->top;
+	tmp->next = del->top;
+	deck->size--;
+	free(deck);
 	/* write codes */
 
 	return;

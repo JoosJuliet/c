@@ -25,21 +25,21 @@
 #define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
 #define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
 
-/* [ Chapter 9: Structures and Unions ]  
+/* [ Chapter 9: Structures and Unions ]
  *
- *	Define "typedef struct" of card, deck, and player 
+ *	Define "typedef struct" of card, deck, and player
  *	and Appropriate "Data Structure" (just one of stack, queue, linked list)
  *
- *  Card has 
- *	1) integer of pips 
- *	2) character of suit 
+ *  Card has
+ *	1) integer of pips
+ *	2) character of suit
  *	3) bool of flipped or not  (type _Bool)
  * 	4) pointer which points next card
  *
  *  Deck has
  * 	1) pointer of top card
  * 	2) size indicates how many cards are inside the deck
- * 	
+ *
  *  Player has
  *	1) string name
  *	2) pointer of card one
@@ -51,6 +51,24 @@
 
 
 	/* Define typedef here */
+  typedef struct Card{
+  	int pips;
+  	char suit;
+  	_Bool flipped;
+  	struct Card *next;
+  }Card;
+
+  typedef struct Deck{
+  	Card *top;
+  	int size;
+  }Deck;
+
+  typedef struct Player {
+  	char* name;
+  	Card* c1;
+  	Card* c2;
+  	int account;
+  }Player;
 
 
 /* function to complete -----> work in ../sources/poker_comp.c */
@@ -68,4 +86,3 @@ void print_deck(Deck*);
 
 /* Calculation of scores */
 void print_score(Player*, Card*[5]);
-
