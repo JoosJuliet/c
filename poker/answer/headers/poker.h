@@ -25,36 +25,36 @@
 #define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
 #define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
 
-/* [ Chapter 9: Structures and Unions ]  
+/* [ Chapter 9: Structures and Unions ]
  *
- *	Define "typedef struct" of card, deck, and player 
+ *	Define "typedef struct" of card, deck, and player
  *	and Appropriate "Data Structure" (just one of stack, queue, linked list)
  *
- *  Card has 
- *	1) integer of pips 
- *	2) character of suit 
+ *  Card has
+ *	1) integer of pips
+ *	2) character of suit
  *	3) bool of flipped or not
  * 	4) pointer which points next card
  *
  *  Deck has
  * 	1) pointer of top card
  * 	2) size indicates how many cards are inside the deck
- * 	
+ *
  *  Player has
  *	1) string name
  *	2) pointer of a Deck
  *	3) int account
  *
  *  Functions to create
- *  
+ *
  *	1) newcard(-,-): Use malloc
  *
- *	2) newdeck(): Use malloc 
- *	
+ *	2) newdeck(): Use malloc
+ *
  * 	3) newplayer(): Use malloc
  *
- *  	4) eject(): only can pop out from the top of the Deck 
- *		    (pop from the bottom is not allowed) 
+ *  	4) eject(): only can pop out from the top of the Deck
+ *		    (pop from the bottom is not allowed)
  *
  *	5) inject(): push a card at the bottom of the Deck
  *
@@ -96,4 +96,3 @@ void print_game();
 
 /* Calculation of scores */
 void print_score(Player*, Card*[5]);
-
